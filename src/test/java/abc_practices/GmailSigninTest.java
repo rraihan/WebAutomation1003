@@ -11,9 +11,9 @@ public class GmailSigninTest {
 
 	public static void main(String[] args) throws Throwable {
 	
-		//System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rakib\\workspace\\drivers\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\rakib\\workspace\\drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.google.com");
 		
