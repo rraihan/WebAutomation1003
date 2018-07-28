@@ -16,7 +16,7 @@ public class GmailSigninTest {
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\rakib\\workspace\\drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.google.com");
-		
+		driver.manage().window().maximize();
 		driver.findElement(By.id("gb_70")).click();
 	//  Assert.assertEquales(true,driver.getPageSource().contains("Google"));
 		driver.findElement(By.id("identifierId")).sendKeys("nokolnaam00");
@@ -36,7 +36,7 @@ public class GmailSigninTest {
 		//driver.findElement(By.id("passwordNext")).click();
 		driver.findElement(By.xpath("//*[@id=\"passwordNext\"]/content")).click();
 		Thread.sleep(5000);
-		//driver.findElement(By.xpath("//*[@id=\"gb\"]/div/div[1]/div[1]/a")).click();
+		driver.findElement(By.xpath("//*[@id=\"gb\"]/div/div[1]/div[1]/a")).click();
 		
 		//*[@id="gsr"] hp vasq
 		
