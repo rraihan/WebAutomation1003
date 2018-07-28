@@ -35,7 +35,10 @@ public class GmailSigninTest {
 		
 		//driver.findElement(By.id("passwordNext")).click();
 		driver.findElement(By.xpath("//*[@id=\"passwordNext\"]/content")).click();
+		Thread.sleep(5000);
+		//driver.findElement(By.xpath("//*[@id=\"gb\"]/div/div[1]/div[1]/a")).click();
 		
+		//*[@id="gsr"] hp vasq
 		
 		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		//driver.findElement(By.xpath("//*[@id=\"gsr\"]")).click();
