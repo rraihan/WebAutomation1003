@@ -5,16 +5,15 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GmailSigninTest {
 
 	public static void main(String[] args) throws Throwable {
-	
-		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\rakib\\workspace\\drivers\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+		WebDriver driver =new ChromeDriver();
+		
 		driver.get("http://www.google.com");
 		driver.manage().window().maximize();
 		driver.findElement(By.id("gb_70")).click();
@@ -28,40 +27,24 @@ public class GmailSigninTest {
 		driver.findElement
 		(By.xpath("//*[@id=\'password']/div[1]/div/div[1]/input")).sendKeys("QQ$%&90s$");
 		
-		//Thread.sleep(1200);
+		Thread.sleep(10000);
+		driver.findElement
+		(By.xpath("//*[@id=\"passwordNext\"]/content/span")).click();
 		
+		Thread.sleep(10000);
 		
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.findElement
+		(By.xpath("//*[@id=\"gbw\"]/div/div/div[1]/div[1]/a")).click();
 		
-		//driver.findElement(By.id("passwordNext")).click();
-		driver.findElement(By.xpath("//*[@id=\"passwordNext\"]/content")).click();
-		Thread.sleep(5000);
-		driver.findElement(By.xpath("//*[@id=\"gb\"]/div/div[1]/div[1]/a")).click();
+		driver.findElement
+		(By.xpath("//*[@id=\"gb\"]/div[1]/div[1]/div/div[5]/div[1]/a/span")).click();
 		
-		//*[@id="gsr"] hp vasq
+		Thread.sleep(10000);
 		
-		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		//driver.findElement(By.xpath("//*[@id=\"gsr\"]")).click();
+		driver.findElement(By.id("gb_71")).click();
 		
-		
-		
-		
-		
-		  
 
 
-		
-		
-		
-		
-	
-		
-		
-		//Thread.sleep(12000);
-		
-		//Thread.sleep(20000);
-		//driver.close();
-		
 	}
 
 }
